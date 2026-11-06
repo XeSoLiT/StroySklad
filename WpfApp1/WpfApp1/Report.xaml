@@ -1,0 +1,24 @@
+﻿<Window x:Class="WpfApp1.Report"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Report" Height="750" Width="1100" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid x:Name="ReportDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="30,30,0,0" Width="1040" Height="520" AutoGenerateColumns="False" IsReadOnly="True">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="ID" Binding="{Binding id}" Width="60"/>
+                <DataGridTextColumn Header="Наименование" Binding="{Binding naimenovanie}" Width="500"/>
+                <DataGridTextColumn Header="Цена" Binding="{Binding cena}" Width="150"/>
+                <DataGridTextColumn Header="Количество" Binding="{Binding kolichestvo}" Width="150"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <Label x:Name="TotalLabel" Content="" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,580,0,0" FontSize="18" FontWeight="Bold"/>
+
+        <Button x:Name="BackBTN" Content="Назад" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,640,0,0" Width="180" Height="45" Background="Transparent" Foreground="#4F46E5" Click="BackBTN_Click"/>
+    </Grid>
+</Window>

@@ -1,0 +1,32 @@
+﻿<Window x:Class="WpfApp1.Postavshiki"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="Postavshiki" Height="850" Width="1100" 
+        WindowStartupLocation="CenterScreen" ResizeMode="NoResize">
+    <Grid>
+        <DataGrid x:Name="PostavshikiDataGrid" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,25,0,0" Width="1050" Height="500" AutoGenerateColumns="True" IsReadOnly="True" SelectionChanged="PostavshikiDataGrid_SelectionChanged"/>
+
+        <Label Content="Название:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,550,0,0"/>
+        <TextBox x:Name="NazvanieBOX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,580,0,0" Width="250" Height="35"/>
+
+        <Label Content="Город:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,550,0,0"/>
+        <TextBox x:Name="GorodBOX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,580,0,0" Width="200" Height="35"/>
+
+        <Label Content="Телефон:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="525,550,0,0"/>
+        <TextBox x:Name="TelefonBOX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="525,580,0,0" Width="200" Height="35"/>
+
+        <Label Content="Фамилия:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="750,550,0,0"/>
+        <TextBox x:Name="FamiliyaBOX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="750,580,0,0" Width="200" Height="35"/>
+
+        <Label Content="Имя:" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,630,0,0"/>
+        <TextBox x:Name="ImyaBOX" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="25,660,0,0" Width="250" Height="35"/>
+
+        <Button x:Name="AddBTN" Content="Добавить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="300,660,0,0" Width="180" Height="45" Click="AddBTN_Click"/>
+        <Button x:Name="DeleteBTN" Content="Удалить" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="500,660,0,0" Width="180" Height="45" Click="DeleteBTN_Click"/>
+        <Button x:Name="BackBTN" Content="Назад" HorizontalAlignment="Left" VerticalAlignment="Top" Margin="800,660,0,0" Width="180" Height="45" Background="Transparent" Foreground="#4F46E5" Click="BackBTN_Click"/>
+    </Grid>
+</Window>
